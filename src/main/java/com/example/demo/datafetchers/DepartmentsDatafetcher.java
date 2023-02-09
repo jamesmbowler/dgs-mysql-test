@@ -3,7 +3,6 @@ package com.example.demo.datafetchers;
 import com.example.demo.models.Department;
 import com.example.demo.repository.DepartmentRepository;
 import com.netflix.graphql.dgs.*;
-import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;

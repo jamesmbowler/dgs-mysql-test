@@ -1,6 +1,5 @@
 package com.example.demo.datafetchers;
 
-import com.example.demo.dataloaders.ReviewsDataLoader;
 import com.example.demo.dataloaders.ReviewsDataLoaderWithContext;
 import com.example.demo.generated.DgsConstants;
 import com.example.demo.generated.types.Review;
@@ -8,17 +7,12 @@ import com.example.demo.generated.types.Show;
 import com.example.demo.generated.types.SubmittedReview;
 import com.example.demo.services.DefaultReviewsService;
 import com.netflix.graphql.dgs.*;
-import org.dataloader.BatchLoaderEnvironment;
 import org.dataloader.DataLoader;
 import org.reactivestreams.Publisher;
 
-import java.util.ArrayList;
 import java.util.Collections;
-import java.util.LinkedHashMap;
-import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
-import java.util.Objects;
 import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
 import java.util.stream.Collectors;
