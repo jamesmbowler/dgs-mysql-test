@@ -27,7 +27,7 @@ dependencies {
 
     implementation("org.springframework.boot:spring-boot-starter-data-jpa")
 
-    implementation("org.projectlombok:lombok:1.18.22")
+    implementation("org.projectlombok:lombok:1.18.26")
 
     implementation("net.datafaker:datafaker:1.7.0")
 
