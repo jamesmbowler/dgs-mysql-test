@@ -1,0 +1,53 @@
+type Query {
+    shows(titleFilter: String): [Show]
+    reviewsByShow(showId: Int): [Review]
+    allReviews: [Review]
+    secureNone: String
+    secureUser: String
+    secureAdmin: String
+    departments: [Department]
+}
+
+type Mutation {
+    addReview(review: SubmittedReview): [Review]
+    addReviews(reviews: [SubmittedReview]): [Review]
+    addArtwork(showId: Int!, upload: Upload!): [Image]! @skipcodegen
+}
+
+type Subscription {
+    reviewAdded(showId: Int!): Review
+}
+type Department {
+    id: Int
+    name: String
+}
+
+type Show {
+    id: Int
+    title: String @uppercase
+    releaseYear: Int
+    reviews(minScore:Int): [Review]
+    artwork: [Image]
+}
+
+type Review {
+    username: String
+    starScore: Int
+    submittedDate: DateTime
+    showId: Int
+}
+
+input SubmittedReview {
+    showId: Int!
+    username: String!
+    starScore: Int!
+}
+
+type Image {
+    url: String
+}
+
+scalar DateTime
+scalar Upload
+directive @skipcodegen on FIELD_DEFINITION
+directive @uppercase on FIELD_DEFINITION
