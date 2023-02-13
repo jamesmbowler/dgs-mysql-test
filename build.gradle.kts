@@ -29,7 +29,7 @@ dependencies {
 
     implementation("org.projectlombok:lombok:1.18.22")
 
-    implementation("net.datafaker:datafaker:1.7.0")
+    implementation("net.datafaker:datafaker:1.8.0")
 
     developmentOnly("org.springframework.boot:spring-boot-devtools")
     runtimeOnly("com.mysql:mysql-connector-j")
